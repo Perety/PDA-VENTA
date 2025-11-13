@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Daynight RP — PDA Policial</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="https://cdn.discordapp.com/attachments/1421898595271180360/1425878366116122654/LOGO_WIZARD_FONDO.png.png" alt="logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px"/></div>
+        <div>
+          <h1>Daynight RP — PDA / CAD</h1>
+          <div class="subtitle">Multiusuario — Online (Flask + Firestore)</div>
+        </div>
+      </div>
+
+      <div class="top-right">
+        <div class="pill small" id="userDisplay">No conectado</div>
+        <div class="pill small" id="dutyStatus">En servicio: 0</div>
+        <button id="btnExport" class="btn">Exportar</button>
+        <button id="btnLogin" class="btn-ghost">Iniciar</button>
+      </div>
+    </header>
+
+    <section class="grid" id="cardsRoot"></section>
+
+    <div id="expandedRoot"></div>
+
+    <footer>Hecho para Daynight RP • Backend: Flask + Firestore</footer>
+  </div>
+
+  <!-- Login modal (simple) -->
+  <div id="loginModal" class="overlay" style="display:none">
+    <div class="modal">
+      <h3>Entrar</h3>
+      <div class="muted small">Introduce tus credenciales (las cuentas deben ser creadas por un admin).</div>
+      <div style="margin-top:12px">
+        <label class="muted small">Usuario</label>
+        <input id="loginUser" placeholder="usuario (ej: perety)"/>
+        <label class="muted small" style="margin-top:8px">Contraseña</label>
+        <input id="loginPass" type="password" placeholder="contraseña"/>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button id="loginBtn" class="btn">Entrar</button>
+          <button id="loginCancel" class="btn-ghost">Cancelar</button>
+        </div>
+        <div id="loginError" class="muted small" style="margin-top:8px;color:#ff9b9b;display:none"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>
